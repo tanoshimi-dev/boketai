@@ -38,6 +38,10 @@ class BokeListScreen extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.thumb_up),
             label: 'Favorites',
           ),
@@ -49,7 +53,9 @@ class BokeListScreen extends StatelessWidget {
           print('Add your code here');
           // getMenus();
           if (index == 0) {
-            context.go('/menus');
+            context.go('/bokes');
+          } else if (index == 1) {
+            context.go('/boke/create');
           } else {
             context.go('/menus/favorites');
           }
@@ -83,6 +89,7 @@ class _BokeListState extends State<BokeList> {
   void initState() {
     super.initState();
     this._lastIndex = 0;
+    this._lastScrollPosition = 0.0;
     //_fetchData();
     // bokeList = getAllBokes(
     //     context, 0, (_lastIndex + loadLength) - 1, _items, updateIndex);

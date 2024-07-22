@@ -12,6 +12,7 @@ import '/screens/cart.dart';
 import '/screens/catalog.dart';
 import '/screens/favorites_screen.dart';
 import '/screens/boke_list_screen.dart';
+import '/screens/boke_create_screen.dart';
 import '/screens/menu_detail_screen.dart';
 import '/screens/menu_list_screen.dart';
 import '/screens/login.dart';
@@ -102,6 +103,10 @@ GoRouter router() {
             builder: (context, state) => const FavoritesScreen(),
           ),
         ],
+      ),
+      GoRoute(
+        path: '/boke/create',
+        builder: (context, state) => const BokeCreateScreen(),
       ),
     ],
   );

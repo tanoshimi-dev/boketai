@@ -53,7 +53,7 @@ class FavoritesScreen extends StatelessWidget {
           print('Add your code here');
 
           if (index == 0) {
-            context.go('/menus');
+            context.go('/bokes');
           } else {
             context.replace('/menus/favorites');
           }

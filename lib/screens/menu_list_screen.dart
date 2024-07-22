@@ -130,7 +130,7 @@ class MenuListScreen extends StatelessWidget {
           print('Add your code here');
           // getMenus();
           if (index == 0) {
-            context.go('/menus');
+            context.go('/bokes');
           } else {
             context.go('/menus/favorites');
           }
